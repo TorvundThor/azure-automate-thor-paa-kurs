@@ -2,4 +2,4 @@ param(
     [Parameter()]
     [String]$navn
 )
-Write-Output "Hallo $navn" 
+Write-Host "Hei $navn" 
