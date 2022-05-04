@@ -2,4 +2,4 @@ param(
     [Parameter()]
     [String]$navn
 )
-Write-Host "Hei $navn" 
+Write-Host "Hei $navn"
