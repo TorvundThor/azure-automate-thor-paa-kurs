@@ -85,18 +85,18 @@ $kortstokk = $kortstokk[2..$kortstokk.Count]
 # trekker 2 kort for magnus
 $magnus = $kortstokk[0..1]
 $kortstokk = $kortstokk[2..$kortstokk.Count]
-$dbg = ""
+
 if ($(summerkort -kortstokk $meg) -eq 21 -and $(summerkort -kortstokk $magnus) -eq 21)
     {
     skrivUt -megListe $meg -magnusListe $magnus -vant "Draw"
     exit
     }
 elseif ($(summerkort -kortstokk $meg) -eq 21) {
-    skrivUt -megListe $meg -magnusListe $magnus -vant "Vinner: Jeg" "21 me "
+    skrivUt -megListe $meg -magnusListe $magnus -vant "Vinner: Jeg" 
     exit
 }
 elseif ($(summerkort -kortstokk $meg) -eq 21) {
-    skrivUt -megListe $meg -magnusListe $magnus -vant "Vinner: Magnus" "21 ma "
+    skrivUt -megListe $meg -magnusListe $magnus -vant "Vinner: Magnus" 
     exit
 }
 
@@ -111,7 +111,7 @@ while ($(summerkort -kortstokk $meg) -lt 21)
 
 if ($(summerkort -kortstokk $meg) -gt 21)
 {
-    skrivUt -megListe $meg -magnusListe $magnus -vant "Vinner: Magnus" "gt 21 meg"
+    skrivUt -megListe $meg -magnusListe $magnus -vant "Vinner: Magnus"
     exit
 }
 
@@ -126,7 +126,7 @@ while ($(summerkort -kortstokk $magnus) -lt 21)
 
 if ($(summerkort -kortstokk $magnus) -gt 21)
 {
-    skrivUt -megListe $meg -magnusListe $magnus -vant "Vinner: Jeg" "gt 21 Mag"
+    skrivUt -megListe $meg -magnusListe $magnus -vant "Vinner: Jeg" 
     exit
 }
 
@@ -137,4 +137,4 @@ elseif ($(summerKort -kortstokk $meg) -lt $(summerKort -kortstokk $magnus))
 else 
     {$vinner = "Draw"}
 
-skrivUt -megListe $meg -magnusListe $magnus -vant $vinner "finish"
+skrivUt -megListe $meg -magnusListe $magnus -vant $vinner 
