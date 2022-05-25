@@ -8,7 +8,7 @@ jobs:
     defaults:
       run:
         shell: pwsh
-    runs-on: ubuntu-latest
+        runs-on: ubuntu-latest
     working-directory: ${{ github.workspace }}
     steps:
       - name: Checkout repository
