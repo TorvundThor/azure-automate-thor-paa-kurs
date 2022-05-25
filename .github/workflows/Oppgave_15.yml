@@ -1,4 +1,4 @@
-ame: oppgave 15
+name: oppgave 15
 on:
   push:
   workflow_dispatch:
