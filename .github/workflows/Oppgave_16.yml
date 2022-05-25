@@ -1,8 +1,8 @@
-name: oppgave 15
+name: oppgave 16
 on:
   push:
     paths:
-      - .github/workflow/Oppgave_15.yml
+      - .github/workflow/Oppgave_16.yml
   workflow_dispatch:
 
 jobs:
@@ -13,6 +13,12 @@ jobs:
         working-directory: ${{ github.workspace }}
     runs-on: ubuntu-latest
     steps:
+      - name: Login via Az module
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZ_KURS }}
+          enable-AzPSSession: true
+
       - name: Checkout repository
         uses: actions/checkout@v2
 
